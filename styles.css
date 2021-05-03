@@ -1,9 +1,10 @@
 #grid {
     display: grid;
     grid-template-columns: repeat(3, 10%);
+    grid-template-rows: repeat(3, 10vw);
 }
 #grid > div {
-    aspect-ratio: 1;
+    line-height: 10vw;
     border: 1px solid black;
     background-color: #666;
     text-align: center;
