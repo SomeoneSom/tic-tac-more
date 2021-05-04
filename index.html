@@ -6,20 +6,32 @@
     </head>
     <body>
         <div id="grid"></div>
-        <p id="winner" style="font-size: larger">Game is ongoing...</p>
-        <button onclick="reset();">Reset</button><br><br>
-        <button onclick="document.getElementById('width').value = (parseInt(document.getElementById('width').value) - 1).toString();">-</button>
-        <input type="text" id="width" value="3"></input>
-        <button onclick="document.getElementById('width').value = (parseInt(document.getElementById('width').value) + 1).toString();">+</button><br><br>
-        <button onclick="document.getElementById('height').value = (parseInt(document.getElementById('height').value) - 1).toString();">-</button>
-        <input type="text" id="height" value="3"></input>
-        <button onclick="document.getElementById('height').value = (parseInt(document.getElementById('height').value) + 1).toString();">+</button><br><br>
-        <button onclick="document.getElementById('players').value = (parseInt(document.getElementById('players').value) - 1).toString();">-</button>
-        <input type="text" id="players" value="2"></input>
-        <button onclick="document.getElementById('players').value = (parseInt(document.getElementById('players').value) + 1).toString();">+</button><br><br>
-        <button onclick="document.getElementById('inARow').value = (parseInt(document.getElementById('inARow').value) - 1).toString();">-</button>
-        <input type="text" id="inARow" value="3"></input>
-        <button onclick="document.getElementById('inARow').value = (parseInt(document.getElementById('inARow').value) + 1).toString();">+</button><br><br>
+        <div id="gameInfo">
+            <p id="winner" style="font-size: larger">Game is ongoing...</p>
+            <button onclick="reset();">Reset</button><br><br>
+        </div>
+        <div id="gameSettings">
+            <div id="width">
+                <button onclick="document.getElementById('width').value = (parseInt(document.getElementById('width').value) - 1).toString();">-</button>
+                <input type="text" id="width" value="3"></input>
+                <button onclick="document.getElementById('width').value = (parseInt(document.getElementById('width').value) + 1).toString();">+</button><br><br>
+            </div>
+            <div id="height">
+                <button onclick="document.getElementById('height').value = (parseInt(document.getElementById('height').value) - 1).toString();">-</button>
+                <input type="text" id="height" value="3"></input>
+                <button onclick="document.getElementById('height').value = (parseInt(document.getElementById('height').value) + 1).toString();">+</button><br><br>
+            </div>
+            <div id="players">
+                <button onclick="document.getElementById('players').value = (parseInt(document.getElementById('players').value) - 1).toString();">-</button>
+                <input type="text" id="players" value="2"></input>
+                <button onclick="document.getElementById('players').value = (parseInt(document.getElementById('players').value) + 1).toString();">+</button><br><br>
+            </div>
+            <div id="inARow">
+                <button onclick="document.getElementById('inARow').value = (parseInt(document.getElementById('inARow').value) - 1).toString();">-</button>
+                <input type="text" id="inARow" value="3"></input>
+                <button onclick="document.getElementById('inARow').value = (parseInt(document.getElementById('inARow').value) + 1).toString();">+</button><br><br>
+            </div>
+        </div>
         <script src="./js/2dboard.js"></script>
         <script src="./main.js"></script>
     </body>
