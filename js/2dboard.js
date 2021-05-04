@@ -14,6 +14,13 @@ class twoDimensionalBoard {
         this.pieces = ["A", "B", "C", "D", "E", "F", "G", "H"];
         this.inARow = inARow;
         this.done = false;
+        let percent = Math.min(Math.floor((3/this.h) * 10), Math.floor((3/this.w) * 10));
+        document.getElementById("grid").style.cssText = `grid-template-columns: repeat(${this.w}, ${percent}%);grid-template-rows: repeat(${this.h}, ${percent}vw);`
+        for (let i = 1; i < (this.h * this.w) + 1; i++) {
+            elems.push("item" + i.toString());
+            document.getElementById("grid").innerHTML += `<div id="${elems[i-1]}"></div>`;
+        }
+        jQuery('#grid').fitText(1.0);
     }
     makeMove(item, num) {
         if (document.getElementById(item).innerHTML != "" || this.done) {
@@ -49,8 +56,6 @@ class twoDimensionalBoard {
                             }
                         }
                     } catch (error) {
-                        console.log(error.name);
-                        console.log(error.message);
                         break;
                     }
                 }
@@ -63,5 +68,10 @@ class twoDimensionalBoard {
             return "Draw!";
         }
         return "continue";
+    }
+    destroy () {
+        elems = [];
+        document.getElementById("grid").innerHTML = "";
+        document.getElementById("winner").innerHTML = "Game is ongoing...";
     }
 }
