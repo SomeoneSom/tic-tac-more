@@ -7,3 +7,12 @@
     color: #fff;
     text-align: center;
 }
+#info {
+    display: block;
+    bottom: 0;
+    text-align: right;
+}
+#info>p>a {
+    color: #000;
+    text-decoration: none;
+}
