@@ -2,9 +2,17 @@
     display: grid;
 }
 #grid > div {
-    line-height: 10vw;
     border: 1px solid black;
     background-color: #666;
     color: #fff;
     text-align: center;
+}
+#info {
+    display: block;
+    bottom: 0;
+    text-align: right;
+}
+#info>p>a {
+    color: #000;
+    text-decoration: none;
 }
