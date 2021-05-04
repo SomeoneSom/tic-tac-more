@@ -1,8 +1,8 @@
 <html>
     <head>
         <link rel="stylesheet" href="styles.css"/>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-        <script src="jquery_libs/jquery.fittext.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="./jqeury_libs/jquery.fittext.js"></script>
     </head>
     <body>
         <div id="grid">
@@ -18,8 +18,9 @@
         </div>
         <p id="winner" style="font-size: larger"></p>
         <script type="text/javascript">
-            $('#grid').fitText();
+            jQuery('#grid').fitText(1.0);
         </script>
+        <script src="js/2dboard.js"></script>
         <script src="main.js"></script>
     </body>
 </html>
