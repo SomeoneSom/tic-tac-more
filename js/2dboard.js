@@ -55,7 +55,7 @@ class twoDimensionalBoard {
                         testCell = this.board[cellReference[0]][cellReference[1]];
                         if (testCell == this.pieces[this.turn]) {
                             numMatches += 1;
-                            if (numMatches >= 3) {
+                            if (numMatches >= this.inARow) {
                                 return this.pieces[this.turn] + " wins!";
                             }
                         }
@@ -63,7 +63,7 @@ class twoDimensionalBoard {
                         break;
                     }
                 }
-                if (numMatches >= 3) {
+                if (numMatches >= this.inARow) {
                     return this.pieces[this.turn] + " wins!";
                 }
             }
