@@ -8,7 +8,10 @@ class twoDimensionalBoard {
     constructor(width, height, maxPlayers, inARow) {
         this.w = width;
         this.h = height
-        this.board = Array(height).fill().map(() => Array(width).fill(""));
+        this.board = [];
+        for (let i = 0; i < height; i++) {
+            this.board.push(Array(width).fill(""))
+        }
         this.turn = 0;
         this.players = maxPlayers;
         this.pieces = ["A", "B", "C", "D", "E", "F", "G", "H"];
@@ -18,17 +21,18 @@ class twoDimensionalBoard {
         document.getElementById("grid").style.cssText = `grid-template-columns: repeat(${this.w}, ${percent}%);grid-template-rows: repeat(${this.h}, ${percent}vw);`
         for (let i = 1; i < (this.h * this.w) + 1; i++) {
             elems.push("item" + i.toString());
-            document.getElementById("grid").innerHTML += `<div id="${elems[i-1]}"></div>`;
+            document.getElementById("grid").innerHTML += `<div id="${elems[i-1]}" style="line-height: ${percent}vw"></div>`;
         }
-        jQuery('#grid').fitText(1.0);
+        jQuery('#grid').fitText(1.0 * (1 - (percent / 10) + 1));
     }
     makeMove(item, num) {
         if (document.getElementById(item).innerHTML != "" || this.done) {
             return;
         }
         document.getElementById(item).innerHTML = this.pieces[this.turn];
-        this.board[Math.floor(num / this.h)][num % this.w] = this.pieces[this.turn];
-        let winState = this.getWinState(Math.floor(num/3), num % 3);
+        //jQuery('#grid').fitText();
+        this.board[Math.floor(num  / this.w)][num % this.w] = this.pieces[this.turn];
+        let winState = this.getWinState(Math.floor(num/this.w), num % this.w);
         if (winState != "continue") {
             this.done = true;
             document.getElementById("winner").innerHTML = winState;
@@ -71,6 +75,7 @@ class twoDimensionalBoard {
     }
     destroy () {
         elems = [];
+        this.board = null
         document.getElementById("grid").innerHTML = "";
         document.getElementById("winner").innerHTML = "Game is ongoing...";
     }
