@@ -30,21 +30,25 @@
                 </div>
                 <div id="gameSettings">
                     <div class="width">
+                        <p>Width</p>
                         <button onclick="document.getElementById('width').value = (parseInt(document.getElementById('width').value) - 1).toString();">-</button>
                         <input type="number" min="1" max="20" id="width" value="3"></input>
                         <button onclick="document.getElementById('width').value = (parseInt(document.getElementById('width').value) + 1).toString();">+</button><br><br>
                     </div>
                     <div class="height">
+                        <p>Height</p>
                         <button onclick="document.getElementById('height').value = (parseInt(document.getElementById('height').value) - 1).toString();">-</button>
                         <input type="number" min="1" max="20" id="height" value="3"></input>
                         <button onclick="document.getElementById('height').value = (parseInt(document.getElementById('height').value) + 1).toString();">+</button><br><br>
                     </div>
                     <div class="players">
+                        <p>Number of players</p>
                         <button onclick="document.getElementById('players').value = (parseInt(document.getElementById('players').value) - 1).toString();">-</button>
                         <input type="number" min="1" max="8" id="players" value="2"></input>
                         <button onclick="document.getElementById('players').value = (parseInt(document.getElementById('players').value) + 1).toString();">+</button><br><br>
                     </div>
                     <div class="inARow">
+                        <p>How many you need to get in a row</p>
                         <button onclick="document.getElementById('inARow').value = (parseInt(document.getElementById('inARow').value) - 1).toString();">-</button>
                         <input type="number" min="1" max="20" id="inARow" value="3"></input>
                         <button onclick="document.getElementById('inARow').value = (parseInt(document.getElementById('inARow').value) + 1).toString();">+</button><br><br>
@@ -52,7 +56,7 @@
                 </div>
             </div>
             <div id="aboutInfo">
-                <p><a href="https://github.com/SomeoneSom/tic-tac-more">github</a>, v0.1</p>
+                <p><a href="https://github.com/SomeoneSom/tic-tac-more">github</a>, v0.2</p>
             </div>
         </div>
         <script src="./js/2dboard.js"></script>
