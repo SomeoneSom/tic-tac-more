@@ -1,18 +1,40 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden
+}
 #grid {
     display: grid;
 }
 #grid > div {
+    position: relative;
+    display: block;
     border: 1px solid black;
     background-color: #666;
     color: #fff;
     text-align: center;
+    left: 0;
+    top: 76px;
+    float: left;
 }
-#info {
+#notGrid {
+    position: absolute;
+    padding-left: 6px;
+    left: 30%;
+    top: 76px;
+    float: left;
+}
+#aboutInfo {
     display: block;
+    position: fixed;
     bottom: 0;
+    right: 0;
     text-align: right;
 }
-#info>p>a {
+#aboutInfo>a {
     color: #000;
     text-decoration: none;
+}
+a:hover {
+    color: tomato;
 }
