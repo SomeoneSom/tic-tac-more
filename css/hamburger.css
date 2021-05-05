@@ -4,6 +4,10 @@
  * 24th of November 2015
  * MIT License
 */
+@font-face {
+    font-family: 'ubuntu-title-fr';
+    src: url('ubuntu-title-fr-1.1.ttf') format('truetype');
+}
 body {
     font-family: "Avenir Next", "Avenir", sans-serif;
 }
@@ -16,6 +20,15 @@ body {
     width: 100%;
     background-color: tomato;
 }
+#title {
+    position: absolute;
+    display: block;
+    font-family: 'ubuntu-title-fr';
+    color: white;
+    font-size: 50px;
+    left: 100px;
+    top: 0;
+}
 #menuToggle {
     display: block;
     position: absolute;
@@ -26,7 +39,7 @@ body {
     user-select: none;
 }
 a {
-    color: #ededed;
+    color: white;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -48,7 +61,7 @@ a {
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-    background: #ededed;
+    background: white;
     border-radius: 3px;
     z-index: 1;
     transform-origin: 4px 0px;
@@ -65,7 +78,7 @@ a {
 #menuToggle input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: #ededed;
+    background: white;
 }
 #menuToggle input:checked ~ span:nth-last-child(3) {
     opacity: 0;
