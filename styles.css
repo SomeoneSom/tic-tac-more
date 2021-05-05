@@ -26,8 +26,10 @@
     right: 0;
     text-align: right;
 }
-#aboutInfo>p>a {
+#aboutInfo>a {
     color: #000;
     text-decoration: none;
-    transition: color 0.3s ease;
+}
+a:hover {
+    color: tomato;
 }
