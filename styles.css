@@ -2,10 +2,22 @@
     display: grid;
 }
 #grid > div {
+    position: relative;
+    display: block;
     border: 1px solid black;
     background-color: #666;
     color: #fff;
     text-align: center;
+    left: 0;
+    top: 76px;
+    float: left;
+}
+#notGrid {
+    position: absolute;
+    padding-left: 6px;
+    left: 30%;
+    top: 76px;
+    float: left;
 }
 #aboutInfo {
     display: block;
@@ -17,4 +29,5 @@
 #aboutInfo>p>a {
     color: #000;
     text-decoration: none;
+    transition: color 0.3s ease;
 }

@@ -17,7 +17,7 @@ class twoDimensionalBoard {
         this.pieces = ["A", "B", "C", "D", "E", "F", "G", "H"];
         this.inARow = inARow;
         this.done = false;
-        let percent = Math.min(Math.floor((3/this.h) * 10), Math.floor((3/this.w) * 10));
+        let percent = Math.min((3/this.h) * 10, (3/this.w) * 10);
         document.getElementById("grid").style.cssText = `grid-template-columns: repeat(${this.w}, ${percent}%);grid-template-rows: repeat(${this.h}, ${percent}vw);`
         for (let i = 1; i < (this.h * this.w) + 1; i++) {
             elems.push("item" + i.toString());
