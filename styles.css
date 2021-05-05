@@ -9,7 +9,9 @@
 }
 #info {
     display: block;
+    position: fixed;
     bottom: 0;
+    right: 0;
     text-align: right;
 }
 #info>p>a {
