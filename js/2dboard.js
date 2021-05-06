@@ -14,7 +14,14 @@ class twoDimensionalBoard {
         }
         this.turn = 0;
         this.players = maxPlayers;
-        this.pieces = ["A", "B", "C", "D", "E", "F", "G", "H"];
+        this.pieces = ["<img src='./coolImg/x.svg' alt='X'>",
+        "<img src='./coolImg/o.svg' alt='O'>",
+        "<img src='./coolImg/triangle.svg' alt='TRIANGLE'>",
+        "<img src='./coolImg/square.svg' alt='SQUARE'>",
+        "<img src='./coolImg/plus.svg' alt='PLUS'>",
+        "<img src='./coolImg/minus.svg' alt='MINUS'>",
+        "<img src='./coolImg/octagon.svg' alt='OCTAGON'>",
+        "<img src='./coolImg/heart.svg' alt='HEART'>"];
         this.inARow = inARow;
         this.done = false;
         let percent = Math.min((3/this.h) * 10, (3/this.w) * 10);
@@ -23,7 +30,6 @@ class twoDimensionalBoard {
             elems.push("item" + i.toString());
             document.getElementById("grid").innerHTML += `<div id="${elems[i-1]}" style="line-height: ${percent}vw"></div>`;
         }
-        jQuery('#grid').fitText(1.0 * (1 - (percent / 10) + 1));
     }
     makeMove(item, num) {
         if (document.getElementById(item).innerHTML != "" || this.done) {
