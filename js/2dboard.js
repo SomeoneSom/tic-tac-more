@@ -23,7 +23,6 @@ class twoDimensionalBoard {
             elems.push("item" + i.toString());
             document.getElementById("grid").innerHTML += `<div id="${elems[i-1]}" style="line-height: ${percent}vw"></div>`;
         }
-        jQuery('#grid').fitText(1.0 * (1 - (percent / 10) + 1));
     }
     makeMove(item, num) {
         if (document.getElementById(item).innerHTML != "" || this.done) {
