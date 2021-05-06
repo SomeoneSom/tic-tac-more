@@ -14,14 +14,14 @@ class twoDimensionalBoard {
         }
         this.turn = 0;
         this.players = maxPlayers;
-        this.pieces = ["<img src='./coolImg/x.png' alt='X'>",
-        "<img src='./coolImg/o.png' alt='O'>",
-        "<img src='./coolImg/triangle.png' alt='TRIANGLE'>",
-        "<img src='./coolImg/sqyare.png' alt='SQUARE'>",
-        "<img src='./coolImg/plus.png' alt='PLUS'>",
-        "<img src='./coolImg/minus.png' alt='MINUS'>",
-        "<img src='./coolImg/octagon.png' alt='OCTAGON'>",
-        "<img src='./coolImg/heart.png' alt='HEART'>"];
+        this.pieces = ["<img src='./coolImg/x.svg' alt='X'>",
+        "<img src='./coolImg/o.svg' alt='O'>",
+        "<img src='./coolImg/triangle.svg' alt='TRIANGLE'>",
+        "<img src='./coolImg/square.svg' alt='SQUARE'>",
+        "<img src='./coolImg/plus.svg' alt='PLUS'>",
+        "<img src='./coolImg/minus.svg' alt='MINUS'>",
+        "<img src='./coolImg/octagon.svg' alt='OCTAGON'>",
+        "<img src='./coolImg/heart.svg' alt='HEART'>"];
         this.inARow = inARow;
         this.done = false;
         let percent = Math.min((3/this.h) * 10, (3/this.w) * 10);
