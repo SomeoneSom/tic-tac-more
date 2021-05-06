@@ -22,6 +22,7 @@ class twoDimensionalBoard {
         "<img src='./coolImg/minus.svg' alt='MINUS'>",
         "<img src='./coolImg/octagon.svg' alt='OCTAGON'>",
         "<img src='./coolImg/heart.svg' alt='HEART'>"];
+        this.piecesText = ["X", "O", "△", "□", "+", "-", "⯃", "♡"]
         this.inARow = inARow;
         this.done = false;
         let percent = Math.min((3/this.h) * 10, (3/this.w) * 10);
@@ -62,7 +63,7 @@ class twoDimensionalBoard {
                         if (testCell == this.pieces[this.turn]) {
                             numMatches += 1;
                             if (numMatches >= this.inARow) {
-                                return this.pieces[this.turn] + " wins!";
+                                return this.piecesText[this.turn] + " wins!";
                             }
                         }
                     } catch (error) {
@@ -70,7 +71,7 @@ class twoDimensionalBoard {
                     }
                 }
                 if (numMatches >= this.inARow) {
-                    return this.pieces[this.turn] + " wins!";
+                    return this.piecesText[this.turn] + " wins!";
                 }
             }
         }
