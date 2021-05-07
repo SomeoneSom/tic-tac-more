@@ -42,3 +42,27 @@ img {
 a:hover {
     color: tomato;
 }
+#blacktint {
+    transition: top 0.3s ease;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 98;
+}
+.modal {
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    left: 35%;
+    top: 135%;
+    border: 10px solid skyblue;
+    outline: 10px solid tomato;
+    margin: auto;
+    vertical-align: center;
+    z-index: 99;
+    background-color: #fff;
+    transition: top 0.3s ease;
+}
