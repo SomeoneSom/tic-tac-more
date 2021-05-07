@@ -35,7 +35,7 @@ img {
     right: 0;
     text-align: right;
 }
-#aboutInfo>a {
+#aboutInfo>p>a {
     color: #000;
     text-decoration: none;
 }
