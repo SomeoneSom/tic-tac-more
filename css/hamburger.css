@@ -39,7 +39,7 @@ body {
     -webkit-user-select: none;
     user-select: none;
 }
-a {
+a :not(#aboutInfo>p>a) {
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
