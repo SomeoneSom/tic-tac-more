@@ -1,12 +1,19 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="css/hamburger.css"/>
+        <link rel="stylesheet" href="./css/hamburger.css"/>
         <link rel="stylesheet" href="styles.css"/>
         <link rel="icon" href="./coolImg/favicon.ico"/>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     </head>
     <body>
-        <div id = "topBar">
+        <div id="modals"></div>
+            <div id="blacktint"></div>
+            <div class="modal" id="tester">
+                <button onclick="document.getElementById('blacktint').style.top = '100%'; document.getElementById('tester').style.top = '135%';">Hide Testing Dialog</button>
+            </div>
+        </div>
+        <div id="topBar">
             <span id="bg"></span>
             <p id="title">tic-tac-more</p>
             <nav role="navigation">
@@ -54,6 +61,8 @@
                         <button onclick="document.getElementById('inARow').value = Math.min((parseInt(document.getElementById('inARow').value) + 1), 20).toString();">+</button><br><br>
                     </div>
                 </div>
+                <br>
+                <button onclick="document.getElementById('blacktint').style.top = '0'; document.getElementById('tester').style.top = '35%';">Show Testing Dialog</button>
             </div>
             <div id="aboutInfo">
                 <p><a href="https://github.com/SomeoneSom/tic-tac-more">github</a>, v0.3.1</p>
